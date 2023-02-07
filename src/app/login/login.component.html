@@ -1,0 +1,91 @@
+<div class="parent">
+  <div class="navbar pt-3 ps-5 row">
+    <div class="brandname d-flex align-items-center col-md-9">
+      <img
+        class="brandlogo me-2"
+        src="../../assets/Images/icons8-hive-64.png"
+        alt=""
+      />
+      <h2><b>Hive</b></h2>
+    </div>
+    <div class="d-flex login col-md-3 align-items-center">
+      <button class="btn text-light" routerLink="/" (click)="Signin()">
+        Sign In</button
+      ><button class="loginbutton" routerLink="/register">Get Started</button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" style="margin-top: 100px">
+        <h1 class="text-light">The Platform for Content Creators</h1>
+        <p class="text-light">
+          Join us and experience a new level of connection and self-expression.
+        </p>
+        <p class="text-light">
+          Connects you with friends and family in a whole new way
+        </p>
+        <div class="emaildiv">
+          <i class="fa-solid fa-envelope text-light"></i
+          ><input
+            type="text"
+            placeholder="your email address"
+            class="emailinput text-light ps-3"
+          /><button class="submitbutton">Submit</button>
+        </div>
+      </div>
+
+      <!-- login form -->
+      <div class="col-md-6" *ngIf="!LoginPageswitch">
+        <form [formGroup]="loginForm" action="" class="ms-5">
+          <div class="emaildiv" style="margin-top: 100px">
+            <input
+              type="text"
+              placeholder="Username"
+              class="emailinput text-light ps-3"
+              formControlName="uname"
+              name="uname"
+            />
+            <i
+              *ngIf="
+                loginForm.get('uname')?.touched &&
+                loginForm.get('uname')?.errors
+              "
+              class="fa-solid fa-xmark text-danger checkicon"
+            ></i>
+          </div>
+          <div class="emaildiv mt-3">
+            <input
+              type="text"
+              formControlName="pswd"
+              name="pswd"
+              placeholder="Password"
+              class="emailinput text-light ps-3"
+            />
+            <i
+              *ngIf="
+                loginForm.get('pswd')?.touched && loginForm.get('pswd')?.errors
+              "
+              class="fa-solid fa-xmark text-danger checkicon"
+            ></i>
+          </div>
+          <div class="mt-3 text-center buttondiv">
+            <button class="sign-in-button" (click)="login()">Sign In</button>
+            <p class="text-light mt-3">
+              Are you new here ?
+              <a class="text-light" routerLink="/register">Click here to Sign Up</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <!-- animation div -->
+      <div class="col-md-6" *ngIf="LoginPageswitch">
+        <img
+          class="gif"
+          src="../../assets/Images/InShot-20230204-200723843-unscreen.gif"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</div>

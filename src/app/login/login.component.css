@@ -1,0 +1,94 @@
+.parent {
+  background-image: url("../../assets/Images/login-background-web.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  margin: 0;
+  overflow: hidden;
+}
+
+.gif {
+  width: 500px;
+  margin-top: 100px;
+}
+.brandname {
+  color: white;
+}
+.brandlogo {
+  width: 40px;
+  margin-top: -10px;
+}
+.loginbutton {
+  height: 30px;
+  background-color: rgb(44, 44, 139); 
+  margin-right: 10px;
+  color: rgb(255, 255, 255);
+  width: 150px;
+  border: 0ch;
+  border-radius: 20px;
+}
+.loginbutton:hover {
+  background-color: rgb(62, 62, 143);
+}
+.emaildiv {
+  background-color: rgba(255, 255, 255, 0.226);
+  border-radius: 20px;
+  width: 400px;
+  height: 50px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.emailinput {
+  border-style: none;
+  background-color: rgba(240, 248, 255, 0);
+  width: 250px;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(255, 255, 255);
+  opacity: 1; /* Firefox */
+}
+input:focus {
+  outline: none;
+}
+.submitbutton {
+  height: 30px;
+  background-color: rgb(173 84 128);
+  border-radius: 20px;
+  margin-right: 10px;
+  color: hwb(0 100% 0%);
+  width: 100px;
+  border: 0ch;
+}
+.submitbutton:hover {
+  background-color: rgb(175, 95, 135);
+}
+.logininput {
+  border-style: none;
+  background-color: rgba(255, 255, 255, 0.226);
+  width: 250px;
+  border-radius: 20px;
+  width: 400px;
+  width: 400px;
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.checkicon {
+  margin-left: 90px;
+}
+.sign-in-button{
+    height: 50px;
+    background-color: rgb(44, 44, 139); /* background-color: white; */
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    width: 150px;
+    border: 0ch;
+}
+.sign-in-button:hover{
+    background-color: rgb(62, 62, 143);
+
+}
+.buttondiv{
+    width: 400px;
+}

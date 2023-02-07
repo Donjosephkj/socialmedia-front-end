@@ -1,0 +1,101 @@
+<div class="parent">
+  <div class="navbar pt-3 ps-5 row">
+    <div class="brandname d-flex align-items-center col-md-9">
+      <img
+        class="brandlogo me-2"
+        src="../../assets/Images/icons8-hive-64.png"
+        alt=""
+      />
+      <h2><b>Hive</b></h2>
+    </div>
+    <div class="d-flex login col-md-3 align-items-center">
+      <button class="btn text-light" routerLink="/">Sign In</button
+      ><button class="loginbutton" routerLink="/register">Get Started</button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="text-center">
+          <h3 class="text-light mt-5">
+            Create your own Path and Share Your Journey
+          </h3>
+          <p class="text-light mt-1">
+            Join the Community and Be a Part of Something Bigger
+          </p>
+        </div>
+       <form [formGroup]="RegisterForm">
+          <div class="registerdiv mt-3 mx-auto">
+            <input
+              type="text"
+              formControlName="name"
+              name="name"
+              placeholder="Name"
+              class="registerinput text-light ps-3"
+            />
+            <i
+              *ngIf="
+                RegisterForm.get('name')?.touched &&
+                RegisterForm.get('name')?.errors
+              "
+              class="fa-solid fa-xmark text-danger checkicon"
+            ></i>
+          </div>
+          <div class="registerdiv mt-3 mx-auto">
+            <input
+              type="text"
+              formControlName="uname"
+              name="uname"
+              placeholder="UserName"
+              class="registerinput text-light ps-3"
+            />
+            <i
+              *ngIf="
+                RegisterForm.get('uname')?.touched &&
+                RegisterForm.get('uname')?.errors
+              "
+              class="fa-solid fa-xmark text-danger checkicon"
+            ></i>
+          </div>
+          <div class="registerdiv mt-3 mx-auto">
+            <input
+              type="text"
+              formControlName="pswd"
+              name="pswd"
+              placeholder=" Create Password"
+              class="registerinput text-light ps-3"
+            />
+            <i
+              *ngIf="
+                RegisterForm.get('pswd')?.touched &&
+                RegisterForm.get('pswd')?.errors
+              "
+              class="fa-solid fa-xmark text-danger checkicon"
+            ></i>
+          </div>
+          <div class="registerdiv mt-3 mx-auto">
+            <input
+              type="text"
+              formControlName="confirmPswd"
+              name="confirmPswd"
+              placeholder=" Confirm Password"
+              class="registerinput text-light ps-3"
+            />
+            <i
+              *ngIf="
+                RegisterForm.get('confirmPswd')?.touched &&
+                RegisterForm.get('confirmPswd')?.errors
+              "
+              class="fa-solid fa-xmark text-danger checkicon"
+            ></i>
+          </div>
+       </form>
+        <div class="text-center mt-3">
+          <button class="create-account text-light" (click)="Register()">
+            Create Account
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
