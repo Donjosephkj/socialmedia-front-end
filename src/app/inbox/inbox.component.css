@@ -1,0 +1,77 @@
+.searchdiv {
+  background-color: rgba(255, 255, 255, 0.226);
+  border-radius: 20px;
+  width: 92%;
+  height: 50px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.searchinput {
+  border-style: none;
+  background-color: rgba(240, 248, 255, 0);
+  width: 250px;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(255, 255, 255);
+  opacity: 1; /* Firefox */
+}
+input:focus {
+  outline: none;
+}
+.dm {
+  background-color: rgba(26, 25, 25, 0.496);
+  border-radius: 20px;
+  width: 92%;
+  max-height: 72vh;
+  overflow-y: scroll;
+}
+.dm-profile {
+  object-fit: cover;
+  object-position: 50% 0;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+}
+.parent {
+  min-height: 80vh;
+  background-color: rgba(26, 25, 25, 0.496);
+  border-radius: 20px;
+  width: 90%;
+}
+.single-dm{
+  padding: 20px;
+  border-radius: 20px;
+}
+.single-dm:hover{
+  background-color: rgba(240, 248, 255, 0.311);
+}
+.back-button-div{
+  border-radius: 50px;
+  padding: 10px;
+}
+.back-button-div:hover{
+  background-color: rgba(240, 248, 255, 0.311);
+}
+.msgdiv {
+  background-color: rgba(255, 255, 255, 0.226);
+  border-radius: 20px;
+  width: 100%;
+  height: 50px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.msginput {
+  border-style: none;
+  background-color: rgba(240, 248, 255, 0);
+  width: 85%;
+}
+.submitbutton {
+  height: 30px;
+  background-color: rgb(173 84 128);
+  border-radius: 20px;
+  margin-right: 10px;
+  color: hwb(0 100% 0%);
+  border: 0ch;
+  width: 30px;
+}

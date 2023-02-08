@@ -8,6 +8,8 @@ import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReactiveFormsModule} from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
+import { FeedComponent } from './feed/feed.component';
+import { InboxComponent } from './inbox/inbox.component';
 
 @NgModule({
     declarations: [
@@ -16,6 +18,8 @@ import { ProfileComponent } from './profile/profile.component';
         RegisterComponent,
         DashboardComponent,
         ProfileComponent,
+        FeedComponent,
+        InboxComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
