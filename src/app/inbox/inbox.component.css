@@ -24,6 +24,7 @@ input:focus {
   border-radius: 20px;
   width: 92%;
   max-height: 72vh;
+  min-height: 72vh;
   overflow-y: scroll;
 }
 .dm-profile {

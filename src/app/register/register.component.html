@@ -24,13 +24,13 @@
             Join the Community and Be a Part of Something Bigger
           </p>
         </div>
-       <form [formGroup]="RegisterForm">
+        <form [formGroup]="RegisterForm" (ngSubmit)="Register()">
           <div class="registerdiv mt-3 mx-auto">
             <input
               type="text"
               formControlName="name"
               name="name"
-              placeholder="Name"
+              placeholder="* Name"
               class="registerinput text-light ps-3"
             />
             <i
@@ -46,7 +46,7 @@
               type="text"
               formControlName="uname"
               name="uname"
-              placeholder="UserName"
+              placeholder="* UserName"
               class="registerinput text-light ps-3"
             />
             <i
@@ -59,10 +59,10 @@
           </div>
           <div class="registerdiv mt-3 mx-auto">
             <input
-              type="text"
+              type="password"
               formControlName="pswd"
               name="pswd"
-              placeholder=" Create Password"
+              placeholder="* Create Password"
               class="registerinput text-light ps-3"
             />
             <i
@@ -75,10 +75,10 @@
           </div>
           <div class="registerdiv mt-3 mx-auto">
             <input
-              type="text"
+              type="password"
               formControlName="confirmPswd"
               name="confirmPswd"
-              placeholder=" Confirm Password"
+              placeholder="* Confirm Password"
               class="registerinput text-light ps-3"
             />
             <i
@@ -89,12 +89,42 @@
               class="fa-solid fa-xmark text-danger checkicon"
             ></i>
           </div>
-       </form>
-        <div class="text-center mt-3">
-          <button class="create-account text-light" (click)="Register()">
-            Create Account
-          </button>
-        </div>
+          <div class="text-center mt-3">
+            <button type="submit" class="create-account text-light">
+              Create Account
+            </button>
+          </div>
+        </form>
+        <p *ngIf="!isMatch" class="text-light text-center mt-3">
+          <i class="fa-solid fa-triangle-exclamation me-2"></i>Password is not
+          matching
+        </p>
+        <p
+          *ngIf="
+            RegisterForm.get('pswd')?.touched &&
+            RegisterForm.get('pswd')?.errors
+          "
+          class="text-light text-center mt-3"
+        >
+          <i class="fa-solid fa-triangle-exclamation me-2"></i>Password should contain Numbers only
+        </p>
+
+        <p *ngIf="!isValid" class="text-light text-center mt-3">
+          <i class="fa-solid fa-triangle-exclamation me-2"></i>Plese fil the
+          required feilds
+        </p>
+        <p *ngIf="succesmsg" class="text-light text-center mt-3">
+          <i class="fa-solid fa-check text-success me-2"></i
+          >{{ succesmsg }} Redirecting to login page
+          <img
+            width="15px"
+            src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif"
+            alt=""
+          />
+        </p>
+        <p *ngIf="errormsg" class="text-light text-center mt-3">
+          <i class="fa-solid fa-xmark text-danger me-2"></i>{{ errormsg }}
+        </p>
       </div>
     </div>
   </div>
